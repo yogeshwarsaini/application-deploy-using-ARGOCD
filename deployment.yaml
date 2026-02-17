@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: school-website
-        image: yogismash/school-website:latest
+        image: yogismash/school-img:latest
         ports:
         - containerPort: 80
 ---
