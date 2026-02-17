@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yogeshwar Bal Niketan Shiksha Deep - Mathura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --saffron: #FF6B1A;
+      --deep-saffron: #E84E0F;
+      --gold: #F5A623;
+      --dark: #1A1208;
+      --cream: #FFF8F0;
+      --white: #FFFFFF;
+      --green: #2D6A4F;
+      --light-green: #40916C;
+      --text: #2C1810;
+      --text-light: #6B4C3B;
+      --border: rgba(255,107,26,0.15);
+      --shadow: 0 20px 60px rgba(26,18,8,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* =================== NAV =================== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,248,240,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid var(--border);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      box-shadow: 0 4px 30px rgba(255,107,26,0.08);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 15px rgba(255,107,26,0.35);
+    }
+
+    .nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .nav-logo-text span {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--saffron);
+      font-family: 'DM Sans', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover { color: var(--saffron); }
+
+    .nav-btn {
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      color: white !important;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: 600 !important;
+      box-shadow: 0 4px 15px rgba(255,107,26,0.3);
+      transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,107,26,0.4) !important;
+      color: white !important;
+    }
+
+    /* =================== HERO =================== */
+    #home {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 70px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 70% 20%, rgba(245,166,35,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(255,107,26,0.1) 0%, transparent 50%),
+        linear-gradient(160deg, #FFF8F0 0%, #FFEEDD 100%);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle, rgba(255,107,26,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .hero-diya {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 220px;
+      opacity: 0.06;
+      animation: float 6s ease-in-out infinite;
+      user-select: none;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(-50%) rotate(-3deg); }
+      50% { transform: translateY(-54%) rotate(3deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 8%;
+      max-width: 750px;
+      animation: heroIn 1s ease-out;
+    }
+
+    @keyframes heroIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,26,0.1);
+      border: 1px solid rgba(255,107,26,0.25);
+      padding: 6px 16px;
+      border-radius: 25px;
+      font-size: 13px;
+      color: var(--saffron);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 62px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .hero-title .highlight {
+      color: var(--saffron);
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(18px, 2.5vw, 26px);
+      color: var(--text-light);
+      margin-bottom: 20px;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.7;
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 6px 25px rgba(255,107,26,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px rgba(255,107,26,0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--saffron);
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      border: 2px solid var(--saffron);
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      background: var(--saffron);
+      color: white;
+    }
+
+    /* Stats Row */
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-item { text-align: left; }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--saffron);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    /* =================== SECTION COMMON =================== */
+    section {
+      padding: 90px 8%;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(255,107,26,0.1);
+      color: var(--saffron);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    /* =================== ABOUT =================== */
+    #about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-main {
+      width: 100%;
+      height: 420px;
+      background: linear-gradient(135deg, #FFE4CC, #FFDAB3);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-img-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,107,26,0.1), rgba(245,166,35,0.1));
+    }
+
+    .about-year-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      color: white;
+      padding: 20px 24px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(255,107,26,0.4);
+    }
+
+    .about-year-badge strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .about-year-badge span {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .mv-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 24px;
+      border-left: 4px solid var(--saffron);
+    }
+
+    .mv-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mv-card p {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* =================== PRINCIPAL =================== */
+    #principal {
+      background: linear-gradient(160deg, #1A1208 0%, #2C1810 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #principal::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,107,26,0.08) 1px, transparent 1px);
+      background-size: 35px 35px;
+    }
+
+    .principal-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .principal-photo-wrap {
+      text-align: center;
+    }
+
+    .principal-photo {
+      width: 280px;
+      height: 340px;
+      background: linear-gradient(135deg, rgba(255,107,26,0.2), rgba(245,166,35,0.15));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 90px;
+      margin: 0 auto 20px;
+      border: 2px solid rgba(255,107,26,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .principal-photo::after {
+      content: 'Photo';
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,107,26,0.8);
+      color: white;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+    }
+
+    .principal-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .principal-title {
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .principal-message .section-tag { background: rgba(255,107,26,0.2); }
+    .principal-message .section-title { color: white; }
+
+    .principal-quote {
+      font-size: 17px;
+      color: rgba(255,248,240,0.85);
+      line-height: 1.85;
+      font-style: italic;
+      position: relative;
+      padding-left: 24px;
+      border-left: 3px solid var(--saffron);
+      margin: 24px 0;
+    }
+
+    .principal-sign {
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    /* =================== ACHIEVEMENTS =================== */
+    #achievements {
+      background: var(--cream);
+    }
+
+    .achieve-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .achieve-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(26,18,8,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-bottom: 3px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .achieve-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(255,107,26,0.15);
+      border-bottom-color: var(--saffron);
+    }
+
+    .achieve-icon {
+      font-size: 44px;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .achieve-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .achieve-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .achieve-year {
+      display: inline-block;
+      background: rgba(255,107,26,0.1);
+      color: var(--saffron);
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    /* =================== ACADEMICS =================== */
+    #academics {
+      background: white;
+    }
+
+    .academics-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+      align-items: start;
+    }
+
+    .classes-wrap h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .class-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .class-chip {
+      background: var(--cream);
+      border: 2px solid var(--border);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.3s;
+      cursor: default;
+    }
+
+    .class-chip:hover, .class-chip.active {
+      background: var(--saffron);
+      border-color: var(--saffron);
+      color: white;
+    }
+
+    .board-info {
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      color: white;
+      padding: 28px;
+      border-radius: 20px;
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .board-info .icon { font-size: 44px; }
+    .board-info h4 { font-size: 13px; opacity: 0.85; text-transform: uppercase; letter-spacing: 1px; }
+    .board-info strong { font-family: 'Playfair Display', serif; font-size: 22px; display: block; margin-top: 4px; }
+
+    .facilities-list h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .facility-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      background: var(--cream);
+      transition: background 0.3s;
+    }
+
+    .facility-item:hover { background: rgba(255,107,26,0.08); }
+
+    .facility-icon {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--saffron), var(--gold));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .facility-item h4 { font-size: 15px; font-weight: 600; color: var(--dark); }
+    .facility-item p { font-size: 13px; color: var(--text-light); margin-top: 3px; }
+
+    /* =================== ADMISSIONS =================== */
+    #admissions {
+      background: var(--cream);
+    }
+
+    .admission-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 60px;
+    }
+
+    .admission-steps h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 28px;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .step-item::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 50px;
+      bottom: -28px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--saffron), transparent);
+    }
+
+    .step-item:last-child::before { display: none; }
+
+    .step-num {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(255,107,26,0.3);
+    }
+
+    .step-content h4 { font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .step-content p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+    .admission-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 28px;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(26,18,8,0.05);
+    }
+
+    .info-card h4 {
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-card li {
+      padding: 6px 0;
+      padding-left: 20px;
+      font-size: 14px;
+      color: var(--text-light);
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .info-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--saffron);
+      font-weight: 700;
+    }
+
+    /* Academic Calendar */
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .calendar-table th {
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      color: white;
+      padding: 10px 14px;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    .calendar-table td {
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--text-light);
+      border-bottom: 1px solid rgba(255,107,26,0.08);
+    }
+
+    .calendar-table tr:nth-child(even) td {
+      background: rgba(255,107,26,0.03);
+    }
+
+    /* =================== GALLERY =================== */
+    #gallery {
+      background: white;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #FFE4CC, #FFDAB3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover { transform: scale(1.02); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    .gallery-item:nth-child(1) { grid-column: span 2; aspect-ratio: 16/9; }
+    .gallery-item:nth-child(5) { grid-column: span 2; aspect-ratio: 16/9; }
+
+    .gallery-dummy {
+      text-align: center;
+      color: rgba(255,107,26,0.5);
+    }
+
+    .gallery-dummy .gicon { font-size: 48px; display: block; margin-bottom: 10px; }
+    .gallery-dummy p { font-size: 13px; font-weight: 600; color: var(--saffron); }
+    .gallery-dummy small { font-size: 11px; color: var(--text-light); display: block; margin-top: 4px; }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(255,107,26,0.85), transparent);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-overlay span {
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    /* Gallery colors */
+    .gallery-item:nth-child(1) { background: linear-gradient(135deg, #FFE4CC, #FFDAB3); }
+    .gallery-item:nth-child(2) { background: linear-gradient(135deg, #D4E8D0, #C3DEC0); }
+    .gallery-item:nth-child(3) { background: linear-gradient(135deg, #D0DEF0, #C0D0E8); }
+    .gallery-item:nth-child(4) { background: linear-gradient(135deg, #F0D0D8, #E8C0CA); }
+    .gallery-item:nth-child(5) { background: linear-gradient(135deg, #EDE0F5, #E0D0F0); }
+    .gallery-item:nth-child(6) { background: linear-gradient(135deg, #FFF0CC, #FFE8B3); }
+
+    /* =================== CONTACT =================== */
+    #contact {
+      background: linear-gradient(160deg, #1A1208, #2C1810);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,107,26,0.08) 1px, transparent 1px);
+      background-size: 35px 35px;
+    }
+
+    .contact-inner { position: relative; z-index: 2; }
+
+    .contact-inner .section-title { color: white; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(255,107,26,0.3);
+    }
+
+    .contact-item h4 { color: var(--gold); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    .contact-item p, .contact-item a {
+      color: rgba(255,248,240,0.85);
+      font-size: 15px;
+      margin-top: 4px;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .contact-item a:hover { color: var(--saffron); }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .hour-card {
+      background: rgba(255,107,26,0.1);
+      border: 1px solid rgba(255,107,26,0.2);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .hour-card h5 { color: var(--gold); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .hour-card p { color: white; font-size: 15px; font-weight: 600; margin-top: 4px; }
+
+    .map-container {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 350px;
+      border: 2px solid rgba(255,107,26,0.2);
+      background: rgba(255,107,26,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* =================== FOOTER =================== */
+    footer {
+      background: #0D0804;
+      padding: 40px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-top: 1px solid rgba(255,107,26,0.15);
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .footer-logo span {
+      display: block;
+      font-size: 12px;
+      color: var(--saffron);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      margin-top: 3px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255,248,240,0.5);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--saffron); }
+
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,248,240,0.4);
+    }
+
+    /* =================== MOBILE MENU =================== */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--saffron);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* =================== SCROLL ANIMATIONS =================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =================== RESPONSIVE =================== */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid, .principal-inner, .academics-layout, .admission-layout, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .achieve-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item:nth-child(1), .gallery-item:nth-child(5) { grid-column: span 1; aspect-ratio: 4/3; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      section { padding: 60px 5%; }
+      .about-year-badge { bottom: -10px; right: -10px; }
+    }
+
+    @media (max-width: 600px) {
+      .achieve-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:nth-child(1), .gallery-item:nth-child(5) { grid-column: span 1; }
+      .mv-grid { grid-template-columns: 1fr; }
+      .hours-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Decorative divider */
+    .divider {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      opacity: 0.3;
+      letter-spacing: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- =================== NAVBAR =================== -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">🪔</div>
+    <div class="nav-logo-text">
+      Yogeshwar Bal Niketan
+      <span>Shiksha Deep • Mathura</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-btn">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-diya">🪔</div>
+  <div class="hero-content">
+    <div class="hero-badge">🏫 Est. 1995 • Mathura, UP</div>
+    <h1 class="hero-title">
+      योगेश्वर बाल निकेतन<br>
+      <span class="highlight">शिक्षा दीप</span>
+    </h1>
+    <p class="hero-subtitle">"ज्ञान से जीवन को रोशन करें"</p>
+    <p class="hero-desc">
+      29 वर्षों से Mathura के बच्चों को गुणवत्तापूर्ण शिक्षा प्रदान करते हुए, 
+      हम हर बच्चे के भविष्य को उज्जवल बनाने के लिए प्रतिबद्ध हैं।
+      UP Board affiliated • PG से Class 8 तक।
+    </p>
+    <div class="hero-buttons">
+      <a href="#admissions" class="btn-primary">📝 Admission Lein &rarr;</a>
+      <a href="#about" class="btn-secondary">और जानें</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">29+</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">1000+</span>
+        <span class="stat-label">Students Passed Out</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10</span>
+        <span class="stat-label">Classes Offered</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ABOUT =================== -->
+<section id="about">
+  <div class="section-tag">हमारे बारे में</div>
+  <h2 class="section-title">एक विरासत, एक सपना</h2>
+  <p class="section-subtitle">1995 से Mathura की धरती पर ज्ञान का दीप जलाते हुए, हम हर बच्चे को उसकी पूरी क्षमता तक पहुँचाने में विश्वास करते हैं।</p>
+  
+  <div class="about-grid fade-in">
+    <div class="about-img-wrap">
+      <div class="about-img-main">
+        🏫
+      </div>
+      <div class="about-year-badge">
+        <strong>1995</strong>
+        <span>से सेवारत</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 16px;">
+        Mathura की शान, बच्चों का अभिमान
+      </h3>
+      <p style="font-size: 15px; color: var(--text-light); line-height: 1.85; margin-bottom: 16px;">
+        योगेश्वर बाल निकेतन शिक्षा दीप की स्थापना 1995 में Mathura के Laxmi Nagar में हुई थी। तब से लेकर आज तक, यह विद्यालय सैकड़ों बच्चों को न केवल अकादमिक ज्ञान बल्कि जीवन के मूल्य भी सिखाता आया है।
+      </p>
+      <p style="font-size: 15px; color: var(--text-light); line-height: 1.85;">
+        UP Board से affiliated हमारा विद्यालय PG (Pre-Primary) से लेकर Class 8 तक की शिक्षा प्रदान करता है। यहाँ बच्चों के सर्वांगीण विकास पर जोर दिया जाता है — पढ़ाई, खेल, कला और नैतिक शिक्षा, सब मिलकर एक बेहतर इंसान बनाते हैं।
+      </p>
+      
+      <div class="mv-grid" style="margin-top: 28px;">
+        <div class="mv-card">
+          <h4>🎯 हमारा Mission</h4>
+          <p>हर बच्चे को एक सुरक्षित, प्रेरणादायक और पोषणकारी वातावरण में गुणवत्तापूर्ण शिक्षा देना, जो उन्हें जीवन की चुनौतियों के लिए तैयार करे।</p>
+        </div>
+        <div class="mv-card">
+          <h4>🌟 हमारी Vision</h4>
+          <p>एक ऐसा समाज बनाना जहाँ हर बच्चा शिक्षित हो, आत्मनिर्भर हो, और देश की प्रगति में योगदान दे सके — यही हमारा सपना है।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PRINCIPAL =================== -->
+<section id="principal">
+  <div class="principal-inner fade-in">
+    <div class="principal-photo-wrap">
+      <div class="principal-photo">👨‍🏫</div>
+      <p class="principal-name">प्रधानाचार्य महोदय</p>
+      <p class="principal-title">Principal • Yogeshwar Bal Niketan</p>
+    </div>
+    <div class="principal-message">
+      <div class="section-tag">प्रधानाचार्य का संदेश</div>
+      <h2 class="section-title">A Message From Our Heart</h2>
+      <div class="principal-quote">
+        "शिक्षा केवल परीक्षा पास करना नहीं है — यह एक ऐसी यात्रा है जो बच्चे को एक सम्पूर्ण मनुष्य बनाती है। 
+        योगेश्वर बाल निकेतन में, हम हर बच्चे को उनकी अनूठी प्रतिभा को पहचानने और निखारने का अवसर देते हैं। 
+        29 वर्षों की इस यात्रा में हमने हजारों बच्चों को जीवन की सही दिशा दी है — यही हमारी सबसे बड़ी उपलब्धि है।
+        <br><br>
+        मैं हर उस माता-पिता को आमंत्रित करता हूँ जो अपने बच्चे का भविष्य सुनहरा देखना चाहते हैं — 
+        आइए, मिलकर हम एक उज्जवल कल का निर्माण करें।"
+      </div>
+      <p class="principal-sign">— प्रधानाचार्य, योगेश्वर बाल निकेतन शिक्षा दीप</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ACHIEVEMENTS =================== -->
+<section id="achievements">
+  <div class="section-tag">उपलब्धियाँ</div>
+  <h2 class="section-title">हमारी गौरवशाली यात्रा</h2>
+  <p class="section-subtitle">29 वर्षों में हमने कई मील के पत्थर हासिल किए हैं, जो हमारी मेहनत और समर्पण का प्रमाण हैं।</p>
+
+  <div class="achieve-grid fade-in">
+    <div class="achieve-card">
+      <span class="achieve-icon">🏆</span>
+      <h3>Best Primary School Award</h3>
+      <p>Mathura district level पर Best Primary School का सम्मान — शिक्षा की गुणवत्ता की पहचान।</p>
+      <span class="achieve-year">2019</span>
+    </div>
+    <div class="achieve-card">
+      <span class="achieve-icon">📊</span>
+      <h3>100% Board Results</h3>
+      <p>UP Board examinations में लगातार 5 वर्षों से 100% pass result — हमारे छात्रों की मेहनत का फल।</p>
+      <span class="achieve-year">2018–2023</span>
+    </div>
+    <div class="achieve-card">
+      <span class="achieve-icon">🎖️</span>
+      <h3>Community Excellence Award</h3>
+      <p>Mathura के समाज सेवा और शिक्षा प्रसार में अतुलनीय योगदान के लिए सम्मानित।</p>
+      <span class="achieve-year">2021</span>
+    </div>
+    <div class="achieve-card">
+      <span class="achieve-icon">🌱</span>
+      <h3>1000+ Successful Alumni</h3>
+      <p>हमारे 1000 से अधिक पूर्व छात्र आज देश के विभिन्न क्षेत्रों में सफलतापूर्वक कार्यरत हैं।</p>
+      <span class="achieve-year">1995–2024</span>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ACADEMICS =================== -->
+<section id="academics">
+  <div class="section-tag">शिक्षा</div>
+  <h2 class="section-title">Academic Excellence</h2>
+  <p class="section-subtitle">UP Board से affiliated हमारा पाठ्यक्रम बच्चों को ठोस बुनियादी ज्ञान देते हुए उनके व्यक्तित्व का विकास करता है।</p>
+
+  <div class="academics-layout fade-in">
+    <div>
+      <div class="classes-wrap">
+        <h3>📚 Classes Offered (PG to Class 8)</h3>
+        <div class="class-list">
+          <span class="class-chip active">PG (Pre-Primary)</span>
+          <span class="class-chip">KG</span>
+          <span class="class-chip">Class 1</span>
+          <span class="class-chip">Class 2</span>
+          <span class="class-chip">Class 3</span>
+          <span class="class-chip">Class 4</span>
+          <span class="class-chip">Class 5</span>
+          <span class="class-chip">Class 6</span>
+          <span class="class-chip">Class 7</span>
+          <span class="class-chip">Class 8</span>
+        </div>
+      </div>
+
+      <div class="board-info">
+        <div class="icon">📋</div>
+        <div>
+          <h4>Affiliated Board</h4>
+          <strong>Uttar Pradesh Board of Education</strong>
+        </div>
+      </div>
+
+      <!-- Academic Calendar -->
+      <div style="margin-top: 30px; background: var(--cream); border-radius: 20px; padding: 28px;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--dark); margin-bottom: 16px;">📅 Academic Calendar 2024–25</h3>
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>महीना</th>
+              <th>गतिविधि</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>अप्रैल</td><td>नया शैक्षणिक सत्र शुरू, Admission</td></tr>
+            <tr><td>जून–जुलाई</td><td>ग्रीष्मकालीन अवकाश</td></tr>
+            <tr><td>अगस्त</td><td>Independence Day समारोह, Half Yearly Exam</td></tr>
+            <tr><td>अक्टूबर</td><td>दशहरा, दीपावली अवकाश</td></tr>
+            <tr><td>नवंबर</td><td>Annual Sports Day, Cultural Program</td></tr>
+            <tr><td>दिसंबर</td><td>Annual Function, Christmas Celebration</td></tr>
+            <tr><td>जनवरी</td><td>Republic Day समारोह</td></tr>
+            <tr><td>फरवरी–मार्च</td><td>Final Examinations</td></tr>
+            <tr><td>मार्च</td><td>Result, Prize Distribution Ceremony</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="facilities-list">
+      <h3>🏫 School Facilities</h3>
+      <div class="facility-item">
+        <div class="facility-icon">💻</div>
+        <div>
+          <h4>Computer Lab</h4>
+          <p>Modern computers से बच्चों को technology-ready बनाया जाता है।</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <div class="facility-icon">📚</div>
+        <div>
+          <h4>Library</h4>
+          <p>Hindi & English books से भरपूर library — पढ़ने की आदत डालने के लिए।</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <div class="facility-icon">🏏</div>
+        <div>
+          <h4>Sports Ground</h4>
+          <p>Cricket, Kho-Kho, Kabaddi जैसे खेलों के लिए पर्याप्त मैदान।</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <div class="facility-icon">🎨</div>
+        <div>
+          <h4>Art & Craft Room</h4>
+          <p>बच्चों की रचनात्मकता को निखारने के लिए dedicated art room।</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <div class="facility-icon">🚌</div>
+        <div>
+          <h4>Safe Transport</h4>
+          <p>Mathura के विभिन्न क्षेत्रों से school van की सुविधा उपलब्ध।</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <div class="facility-icon">🍽️</div>
+        <div>
+          <h4>Mid-Day Meal</h4>
+          <p>सरकारी योजना के तहत पोषणयुक्त भोजन की व्यवस्था।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ADMISSIONS =================== -->
+<section id="admissions">
+  <div class="section-tag">प्रवेश</div>
+  <h2 class="section-title">Admission 2025–26</h2>
+  <p class="section-subtitle">अपने बच्चे का भविष्य सुनिश्चित करें — प्रवेश प्रक्रिया सरल और पारदर्शी है।</p>
+
+  <div class="admission-layout fade-in">
+    <div class="admission-steps">
+      <h3>📋 Admission Process (Step by Step)</h3>
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>School Visit करें</h4>
+          <p>School office में आएं और Admission Form लें। Form बिल्कुल निःशुल्क है। Office hours के दौरान आएं।</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Form भरें</h4>
+          <p>Form में सभी जानकारी सही-सही भरें — बच्चे का नाम, जन्म तिथि, पता, माता-पिता की जानकारी।</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Documents Submit करें</h4>
+          <p>सभी आवश्यक documents की photocopies form के साथ जमा करें।</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Interaction / Assessment</h4>
+          <p>Class 1 से ऊपर के लिए एक informal interaction होगी — यह test नहीं, बस बच्चे को समझने के लिए।</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Fee जमा करें और Confirm करें</h4>
+          <p>Admission confirm होने पर fee जमा करें और admission letter लें। बच्चा अगले दिन से school start कर सकता है!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="admission-info">
+      <h3>ℹ️ Important Information</h3>
+
+      <div class="info-card">
+        <h4>🎂 Age Criteria (2025–26)</h4>
+        <ul>
+          <li>PG (Pre-Primary): 3–4 साल</li>
+          <li>KG (Nursery): 4–5 साल</li>
+          <li>Class 1: 5–6 साल (minimum 5 years)</li>
+          <li>Class 2–8: पिछली class pass होना अनिवार्य</li>
+          <li>TC (Transfer Certificate) वाले सभी classes में apply कर सकते हैं</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h4>📄 Required Documents</h4>
+        <ul>
+          <li>बच्चे का Birth Certificate (जन्म प्रमाण पत्र)</li>
+          <li>Aadhar Card — बच्चे का तथा माता/पिता का</li>
+          <li>2 Passport size photos (बच्चे की)</li>
+          <li>Residence proof (निवास प्रमाण पत्र)</li>
+          <li>Previous school TC (Class 2+ के लिए)</li>
+          <li>Caste Certificate (यदि applicable हो)</li>
+          <li>पिछली class की Marksheet (Class 2+ के लिए)</li>
+        </ul>
+      </div>
+
+      <div class="info-card" style="border: 2px solid rgba(255,107,26,0.2); background: rgba(255,248,240,1);">
+        <h4>📞 Admission Enquiry</h4>
+        <p style="font-size: 14px; color: var(--text-light); line-height: 1.7;">
+          किसी भी जानकारी के लिए हमसे संपर्क करें:<br>
+          <strong style="color: var(--saffron); font-size: 16px;">📱 8273564414 / 9958847153</strong><br>
+          <span style="font-size: 13px;">Office hours में call करें — Summer: 11am–1pm | Winter: 9am–2pm</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== GALLERY =================== -->
+<section id="gallery">
+  <div class="section-tag">गैलरी</div>
+  <h2 class="section-title">Our Memories & Moments</h2>
+  <p class="section-subtitle">Annual Day, Sports Day, Cultural Events — हमारे विद्यालय की रंगीन यादें।</p>
+
+  <div class="gallery-grid fade-in">
+    <div class="gallery-item">
+      <div class="gallery-dummy">
+        <span class="gicon">🎭</span>
+        <p>Annual Day 2024</p>
+        <small>Event Photo — Replace with actual image</small>
+      </div>
+      <div class="gallery-overlay"><span>Annual Day Celebration</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-dummy">
+        <span class="gicon">🏏</span>
+        <p>Sports Day</p>
+        <small>Replace with actual image</small>
+      </div>
+      <div class="gallery-overlay"><span>Annual Sports Day</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-dummy">
+        <span class="gicon">🇮🇳</span>
+        <p>Independence Day</p>
+        <small>Replace with actual image</small>
+      </div>
+      <div class="gallery-overlay"><span>Independence Day 2024</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-dummy">
+        <span class="gicon">🎨</span>
+        <p>Art Competition</p>
+        <small>Replace with actual image</small>
+      </div>
+      <div class="gallery-overlay"><span>Art & Craft Competition</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-dummy">
+        <span class="gicon">🙏</span>
+        <p>Cultural Program</p>
+        <small>Replace with actual image</small>
+      </div>
+      <div class="gallery-overlay"><span>Cultural Program</span></div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-dummy">
+        <span class="gicon">🏆</span>
+        <p>Prize Distribution</p>
+        <small>Replace with actual image</small>
+      </div>
+      <div class="gallery-overlay"><span>Prize Distribution Ceremony</span></div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <p style="color: var(--text-light); font-size: 14px;">
+      💡 <em>Gallery images — apni actual event photos upload karke replace karein</em>
+    </p>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-tag" style="background: rgba(255,107,26,0.2); color: var(--gold);">संपर्क करें</div>
+    <h2 class="section-title">हम आपकी प्रतीक्षा में हैं</h2>
+    <p class="section-subtitle" style="color: rgba(255,248,240,0.7);">Admission, enquiry या किसी भी जानकारी के लिए बेझिझक संपर्क करें।</p>
+
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>Laxmi Nagar, Birla Mandir के सामने,<br>Opposite Dharamshala,<br>Mathura, Uttar Pradesh</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <h4>Phone Numbers</h4>
+            <a href="tel:8273564414">📞 8273564414</a>
+            <a href="tel:9958847153">📞 9958847153</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:yogeshwarsaini321@gmail.com">yogeshwarsaini321@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Office Hours</h4>
+            <div class="hours-grid">
+              <div class="hour-card">
+                <h5>☀️ Summer</h5>
+                <p>11:00 AM – 1:00 PM</p>
+              </div>
+              <div class="hour-card">
+                <h5>❄️ Winter</h5>
+                <p>9:00 AM – 2:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46.07!2d77.6766085!3d27.5286839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDMxJzQzLjMiTiA3N8KwNDAnMzUuOCJF!5e1!3m2!1sen!2sin!4v1234567890"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Yogeshwar Bal Niketan Location">
+          </iframe>
+        </div>
+        <div style="margin-top: 16px; text-align: center;">
+          <a href="https://www.google.com/maps/@27.5286839,77.6766085,46m/data=!3m1!1e3?entry=ttu" target="_blank" class="btn-primary" style="display: inline-flex; font-size: 14px; padding: 12px 24px;">
+            🗺️ Google Maps पर देखें
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="footer-logo">
+    🪔 Yogeshwar Bal Niketan Shiksha Deep
+    <span>Mathura, Uttar Pradesh • Est. 1995</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Yogeshwar Bal Niketan Shiksha Deep. All rights reserved.</p>
+</footer>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Class chip hover
+  document.querySelectorAll('.class-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.class-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+
+  // Mobile menu toggle
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.cssText = `
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(255,248,240,0.98);
+        padding: 20px 5%;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(26,18,8,0.1);
+        z-index: 999;
+      `;
+    }
+  }
+
+  // Navbar active state
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.style.boxShadow = '0 4px 30px rgba(255,107,26,0.12)';
+    } else {
+      nav.style.boxShadow = '0 4px 30px rgba(255,107,26,0.08)';
+    }
+  });
+
+  // Smooth active nav links
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.style.color = '';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.color = 'var(--saffron)';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
